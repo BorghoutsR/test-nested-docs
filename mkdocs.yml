@@ -1,0 +1,168 @@
+# Project information
+site_name: Club.Rescue | Club.Redders
+site_url: http://clubrescue.github.io
+site_author: Ruud Borghouts
+site_description: >-
+  A set of Open Source and affordable IT packages that enable your association with secure and AVG complient software.
+  Manage your members and activities from your (self hosted) cloud solutions.
+# Repository
+repo_name: clubrescue/clubrescue.github.io
+repo_url: https://github.com/clubrescue/clubrescue.github.io
+edit_uri: edit/dev/docs/
+
+# Copyright
+copyright: Copyright &copy; 2017 Ruud Borghouts, CC BY-SA 4.0.
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - tabs
+    #- instant
+  palette:
+    scheme: default
+    primary: light blue
+    accent: amber
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.ico
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  - search
+  - redirects:
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/clubrescue
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ruudborghouts
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - ITSuite4NP:
+    - Introductie: itsuitefornonprofits/index.md
+    - HLV: itsuitefornonprofits/index.md
+    - Product eisen: itsuitefornonprofits/index.md
+    - Componenten (en kostenoverzicht): itsuitefornonprofits/index.md
+    - Office365:
+      - Werkinstrucite beheer: itsuitefornonprofits/office365/index.md
+      - DNS instellingen: itsuitefornonprofits/office365/index.md
+      - Handleiding aanzetten MFA: itsuitefornonprofits/office365/index.md
+      - Template gebruikers en autorisatieoverzichten > instructie voor opstellen van...: itsuitefornonprofits/office365/index.md
+    - MachForm:
+      - Werkinstructie beheer: itsuitefornonprofits/wysiwygforms/index.md
+    - WordPress:
+      - Werkinstructie beheer: itsuitefornonprofits/wysiwygsite/index.md
+  - Club.Rescue:
+    - Languages: crdocs/index.md
+    - Englisch: https://clubrescue.github.io/crdocs-en
+    - Dutch: https://clubrescue.github.io/crdocs-nl
+  - About us:
+    - About: aboutus/index.md
+    - Repositories: https://github.com/clubrescue
+    - Vacancies: aboutus/vacancies.md
+  - Demo pages:
+    - Getting started:
+      - Installation: demopages/gettingstarted/getting-started.md
+      - Creating your site: demopages/gettingstarted/creating-your-site.md
+      - Publishing your site: demopages/gettingstarted/publishing-your-site.md
+      - Customization: demopages/gettingstarted/customization.md
+      - Troubleshooting: demopages/gettingstarted/troubleshooting.md
+      - Data privacy: demopages/gettingstarted/data-privacy.md
+      - Insiders: demopages/gettingstarted/insiders.md
+      #- License: demopages/gettingstarted/license.md
+    - Setup:
+      - Changing the colors: demopages/setup/changing-the-colors.md
+      - Changing the fonts: demopages/setup/changing-the-fonts.md
+      - Changing the language: demopages/setup/changing-the-language.md
+      - Changing the logo and icons: demopages/setup/changing-the-logo-and-icons.md
+      - Setting up navigation: demopages/setup/setting-up-navigation.md
+      - Setting up site search: demopages/setup/setting-up-site-search.md
+      - Setting up site analytics: demopages/setup/setting-up-site-analytics.md
+      - Setting up the header: demopages/setup/setting-up-the-header.md
+      - Adding social links: demopages/setup/adding-social-links.md
+      - Adding a git repository: demopages/setup/adding-a-git-repository.md
+      - Adding a comment system: demopages/setup/adding-a-comment-system.md
+    - Reference:
+      - Admonitions: demopages/reference/admonitions.md
+      - Buttons: demopages/reference/buttons.md
+      - Code blocks: demopages/reference/code-blocks.md
+      - Content tabs: demopages/reference/content-tabs.md
+      - Data tables: demopages/reference/data-tables.md
+      - Footnotes: demopages/reference/footnotes.md
+      - Formatting: demopages/reference/formatting.md
+      - Icons + Emojis: demopages/reference/icons-emojis.md
+      - Images: demopages/reference/images.md
+      - Lists: demopages/reference/lists.md
+      - MathJax: demopages/reference/mathjax.md
+      - Meta tags: demopages/reference/meta-tags.md
+    - Changelog:
+      - Release notes: demopages/changelog/changelog.md
+      - Upgrading: demopages/changelog/upgrading.md
+      - Deprecations: demopages/changelog/deprecations.md
+
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
