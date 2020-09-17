@@ -15,5 +15,5 @@ jobs:
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
-      - run: mkdocs gh-deploy --force --config-file ./docs/crdocs/crdocs-en/mkdocs.yml
-      - run: mkdocs gh-deploy --force --config-file ./docs/crdocs/crdocs-nl/mkdocs.yml
+      - run: mkdocs gh-deploy --force --config-file ./docs/crdocs/en/mkdocs.yml
+      - run: mkdocs gh-deploy --force --config-file ./docs/crdocs/nl/mkdocs.yml
